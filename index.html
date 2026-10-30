@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102c35">
+  <meta name="description" content="سيرتي — أنشئ سيرة ذاتية احترافية بسهولة، اختر قالبك، وشاهد التعديلات مباشرة ثم احفظها PDF.">
+  <title>سيرتي — اصنع انطباعك الأول</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="spark">✦</span> اصنع سيرة ذاتية تليق بطموحك — مجاناً وبدون تسجيل <span class="announcement-dot"></span></div>
+  <header class="site-header">
+    <a class="logo" href="#"><span class="logo-symbol">س</span><span>سيرتي<span class="logo-dot">.</span><small>مساحتك المهنية</small></span></a>
+    <nav class="main-nav"><a href="#builder">منشئ السيرة</a><a href="#templates">القوالب</a><a href="#benefits">المميزات</a><a href="#plans">الاشتراكات</a><a href="#guide">كيف يعمل؟</a></nav>
+    <div class="header-actions"><button class="btn btn-outline" id="accountBtn">دخول / حسابي</button><button class="btn btn-outline" id="clearAll">سيرة جديدة</button><a class="btn btn-dark" href="#builder">ابدأ الآن <span>↙</span></a><button class="mobile-menu" id="mobileMenu" aria-label="القائمة">☰</button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-kicker"><span class="kicker-icon">✦</span> أداة ذكية لبناء مستقبلك المهني</div>
+        <h1>خلّي سيرتك<br><span>تحكي قصتك.</span></h1>
+        <p class="hero-description">حوّل خبراتك ومهاراتك إلى سيرة ذاتية مرتبة وجذابة. ابدأ من الصفر، اختر التصميم الذي يناسبك، وشاهد النتيجة أمامك لحظة بلحظة.</p>
+        <div class="hero-buttons"><a href="#builder" class="btn btn-primary btn-xl">أنشئ سيرتك مجاناً <span>←</span></a><a href="#templates" class="text-link">استكشف القوالب <span>↙</span></a></div>
+        <div class="hero-stats"><div><strong>3</strong><span>قوالب أنيقة</span></div><i></i><div><strong>100%</strong><span>تحكم ببياناتك</span></div><i></i><div><strong>PDF</strong><span>جاهزة للطباعة</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-glow"></div><div class="decor decor-a">✳</div><div class="decor decor-b">✦</div>
+        <div class="floating-note note-top"><span class="note-icon">✓</span><span><b>مظهر احترافي</b><small>تفاصيل مرتبة وواضحة</small></span></div>
+        <div class="hero-paper">
+          <div class="paper-top"><div class="paper-avatar">أم</div><div><b>أحمد محمد</b><small>مطور واجهات أمامية</small></div><span class="paper-badge">CV</span></div>
+          <div class="paper-contact">ahmed@email.com　•　+249 900 000 000</div>
+          <div class="paper-section"><b>نبذة مهنية</b><i class="line l100"></i><i class="line l90"></i><i class="line l75"></i></div>
+          <div class="paper-section"><b>الخبرات العملية</b><div class="paper-entry"><strong>مطور واجهات</strong><small>شركة التقنية · 2022 — الآن</small><i class="line l90"></i><i class="line l65"></i></div></div>
+          <div class="paper-section"><b>المهارات</b><div class="paper-pills"><i>HTML</i><i>CSS</i><i>JavaScript</i></div></div>
+        </div>
+        <div class="floating-note note-bottom"><span class="download-icon">↓</span><span><b>جاهزة للتحميل</b><small>PDF بجودة عالية</small></span></div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><span>مصمم لتسهيل رحلتك المهنية</span><b>وضوح</b><b>بساطة</b><b>احترافية</b><b>خصوصية</b></section>
+
+    <section class="builder-section" id="builder">
+      <div class="section-title"><div><span class="eyebrow">مساحة العمل</span><h2>لنبدأ ببناء سيرتك</h2><p>أكمل الأقسام بالترتيب أو انتقل مباشرة إلى القسم الذي تريده.</p></div><div class="autosave"><span class="save-dot"></span><span id="saveStatus">الحفظ التلقائي مفعّل</span></div></div>
+      <div class="builder-layout">
+        <aside class="editor-card">
+          <div class="editor-top"><div><span class="editor-label">محرر البيانات</span><h3>معلوماتك المهنية</h3></div><button class="reset-icon" id="resetForm" title="مسح البيانات">↻</button></div>
+          <div class="completion"><div><span>اكتمال السيرة الذاتية</span><b id="progressText">0%</b></div><div class="progress-track"><span id="progressBar"></span></div></div>
+          <div class="step-nav" id="stepNav">
+            <button class="step active" data-tab="personal"><span>01</span><b>الشخصية</b></button>
+            <button class="step" data-tab="summary"><span>02</span><b>الملخص</b></button>
+            <button class="step" data-tab="experience"><span>03</span><b>الخبرة</b></button>
+            <button class="step" data-tab="education"><span>04</span><b>التعليم</b></button>
+            <button class="step" data-tab="skills"><span>05</span><b>المهارات</b></button>
+            <button class="step" data-tab="extras"><span>06</span><b>إضافات</b></button>
+          </div>
+          <form id="cvForm" autocomplete="on">
+            <div class="tab-panel active" data-panel="personal">
+              <div class="panel-heading"><span class="panel-icon">♙</span><div><h4>المعلومات الشخصية</h4><p>كيف يمكن لصاحب العمل التواصل معك؟</p></div></div>
+              <div class="photo-upload"><div class="photo-preview" id="photoPreview">+</div><div><b>صورة شخصية <small>(اختياري)</small></b><p>اختر صورة واضحة بخلفية بسيطة.</p><label class="upload-link" for="photoInput">رفع صورة</label><input id="photoInput" type="file" accept="image/*" hidden></div><button type="button" id="removePhoto" class="remove-photo">إزالة</button></div>
+              <div class="input-grid">
+                <label class="field">الاسم الكامل <span>*</span><input name="name" placeholder="مثال: أحمد محمد علي" required></label>
+                <label class="field">المسمى الوظيفي<input name="job" placeholder="مثال: محاسب مالي"></label>
+                <label class="field">البريد الإلكتروني<input name="email" type="email" placeholder="name@email.com"></label>
+                <label class="field">رقم الهاتف<input name="phone" placeholder="+249 9XX XXX XXX"></label>
+                <label class="field">المدينة والدولة<input name="location" placeholder="أم درمان، السودان"></label>
+                <label class="field">LinkedIn<input name="linkedin" placeholder="linkedin.com/in/name"></label>
+                <label class="field full">الموقع الشخصي / معرض الأعمال<input name="website" placeholder="www.yourportfolio.com"></label>
+              </div>
+              <div class="panel-footer"><span class="required-note">* الحقول الأساسية</span><button type="button" class="btn btn-primary next">التالي: الملخص <span>←</span></button></div>
+            </div>
+            <div class="tab-panel" data-panel="summary">
+              <div class="panel-heading"><span class="panel-icon">✎</span><div><h4>الملخص المهني</h4><p>قدّم نفسك في فقرة قصيرة ومقنعة.</p></div></div>
+              <label class="field">نبذة عنك<textarea name="summary" rows="7" placeholder="أنا متخصص في ... أمتلك خبرة في ... وأتميز بقدرتي على ... وأسعى إلى توظيف مهاراتي في بيئة تساعدني على التطور وتحقيق نتائج ملموسة."></textarea><small class="field-help">نصيحة: اجعل النبذة من 3 إلى 5 أسطر وخصصها للوظيفة التي تتقدم إليها.</small></label>
+              <div class="panel-footer"><button type="button" class="btn btn-soft prev">السابق</button><button type="button" class="btn btn-primary next">التالي: الخبرة <span>←</span></button></div>
+            </div>
+            <div class="tab-panel" data-panel="experience">
+              <div class="panel-heading"><span class="panel-icon">▣</span><div><h4>الخبرات العملية</h4><p>ابدأ بأحدث وظيفة ثم أضف ما قبلها.</p></div></div>
+              <div id="experienceList"></div><button type="button" class="add-entry" id="addExperience">＋ إضافة خبرة عملية</button>
+              <div class="panel-footer"><button type="button" class="btn btn-soft prev">السابق</button><button type="button" class="btn btn-primary next">التالي: التعليم <span>←</span></button></div>
+            </div>
+            <div class="tab-panel" data-panel="education">
+              <div class="panel-heading"><span class="panel-icon">▤</span><div><h4>التعليم والمؤهلات</h4><p>أضف دراستك الأكاديمية أو التدريب المهني.</p></div></div>
+              <div id="educationList"></div><button type="button" class="add-entry" id="addEducation">＋ إضافة مؤهل تعليمي</button>
+              <div class="panel-footer"><button type="button" class="btn btn-soft prev">السابق</button><button type="button" class="btn btn-primary next">التالي: المهارات <span>←</span></button></div>
+            </div>
+            <div class="tab-panel" data-panel="skills">
+              <div class="panel-heading"><span class="panel-icon">✧</span><div><h4>المهارات واللغات</h4><p>أبرز المهارات المرتبطة بالوظيفة المستهدفة.</p></div></div>
+              <label class="field">المهارات <textarea name="skills" rows="4" placeholder="التواصل الفعال، حل المشكلات، Microsoft Excel، إدارة الوقت"></textarea><small class="field-help">افصل بين المهارات بفاصلة.</small></label>
+              <label class="field">اللغات ومستوى الإتقان<textarea name="languages" rows="3" placeholder="العربية — اللغة الأم&#10;الإنجليزية — جيد جداً"></textarea></label>
+              <div class="panel-footer"><button type="button" class="btn btn-soft prev">السابق</button><button type="button" class="btn btn-primary next">التالي: إضافات <span>←</span></button></div>
+            </div>
+            <div class="tab-panel" data-panel="extras">
+              <div class="panel-heading"><span class="panel-icon">✦</span><div><h4>أقسام إضافية</h4><p>أضف ما يعزز ملفك المهني.</p></div></div>
+              <label class="field">الدورات والشهادات<textarea name="certificates" rows="3" placeholder="اسم الدورة — الجهة المانحة — السنة"></textarea></label>
+              <label class="field">المشاريع والإنجازات<textarea name="projects" rows="3" placeholder="اسم المشروع: وصف مختصر، دورك، والنتيجة التي حققتها."></textarea></label>
+              <label class="field">التطوع والأنشطة<textarea name="volunteer" rows="3" placeholder="الجهة — الدور — الفترة"></textarea></label>
+              <div class="panel-footer"><button type="button" class="btn btn-soft prev">السابق</button><button type="button" class="btn btn-primary" id="reviewBtn">مراجعة السيرة ✓</button></div>
+            </div>
+          </form>
+        </aside>
+
+        <section class="preview-column">
+          <div class="preview-tools">
+            <div class="preview-caption"><span class="live-dot"></span><div><b>معاينة سيرتك</b><small>تتحدث تلقائياً مع كل تعديل</small></div></div>
+            <div class="preview-actions"><label>القالب<select id="templateSelect"><option value="classic">الأنيق</option><option value="modern">العصري</option><option value="minimal">البسيط</option></select></label><button class="btn btn-dark" id="printBtn">↓ تحميل PDF</button></div>
+          </div>
+          <div class="paper-stage"><article class="resume-paper template-classic" id="resumePreview">
+            <header class="resume-header"><div class="resume-identity"><img id="pPhoto" alt="" hidden><div><h1 id="pName">اسمك الكامل</h1><h2 id="pJob">المسمى الوظيفي</h2></div></div><div class="resume-contact" id="pContact">البريد الإلكتروني　•　رقم الهاتف　•　المدينة</div></header>
+            <div class="resume-body">
+              <section class="resume-section" id="summarySection"><h3>الملخص المهني</h3><p id="pSummary">أضف نبذة مهنية قصيرة لتظهر هنا.</p></section>
+              <section class="resume-section" id="experienceSection"><h3>الخبرات العملية</h3><div id="pExperience" class="empty-state">ستظهر خبراتك هنا.</div></section>
+              <section class="resume-section" id="educationSection"><h3>التعليم</h3><div id="pEducation" class="empty-state">ستظهر مؤهلاتك هنا.</div></section>
+              <section class="resume-section" id="skillsSection"><h3>المهارات</h3><div id="pSkills" class="skill-list"><span>مهاراتك</span></div></section>
+              <section class="resume-section" id="languagesSection"><h3>اللغات</h3><p id="pLanguages"></p></section>
+              <section class="resume-section" id="certificatesSection"><h3>الدورات والشهادات</h3><p id="pCertificates"></p></section>
+              <section class="resume-section" id="projectsSection"><h3>المشاريع والإنجازات</h3><p id="pProjects"></p></section>
+              <section class="resume-section" id="volunteerSection"><h3>التطوع والأنشطة</h3><p id="pVolunteer"></p></section>
+            </div>
+            <footer class="resume-foot">سيرتي <span>•</span> ملفك المهني باحتراف<div class="legal-links"><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">الشروط والأحكام</a></div></footer>
+          </article></div>
+          <div class="preview-note">✦ <span>لأفضل نتيجة، راجع الإملاء وتأكد من صحة بيانات التواصل قبل التحميل.</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="templates-section" id="templates"><div class="section-title centered"><span class="eyebrow">اختر هويتك المهنية</span><h2>قوالب تناسب كل طموح</h2><p>ثلاثة تصاميم واضحة لتناسب مختلف المجالات والخبرات.</p></div><div class="template-cards"><button class="template-card selected" data-template="classic"><div class="template-thumb thumb-classic"><i></i><b></b><b></b><em></em><em></em></div><strong>الأنيق</strong><small>متوازن ومناسب لمعظم الوظائف</small></button><button class="template-card" data-template="modern"><div class="template-thumb thumb-modern"><i></i><b></b><b></b><em></em><em></em></div><strong>العصري</strong><small>لمظهر جريء وحديث</small></button><button class="template-card" data-template="minimal"><div class="template-thumb thumb-minimal"><i></i><b></b><b></b><em></em><em></em></div><strong>البسيط</strong><small>تركيز على المحتوى والوضوح</small></button></div></section>
+
+    <section class="benefits-section" id="benefits"><div class="section-title centered"><span class="eyebrow">لماذا سيرتي؟</span><h2>تفاصيل صغيرة تصنع فرقاً كبيراً</h2></div><div class="benefit-grid"><article><span>⚡</span><h3>سريع وسهل</h3><p>لا تحتاج إلى خبرة في التصميم. فقط املأ الحقول وشاهد سيرتك تتشكل.</p></article><article><span>◫</span><h3>معاينة مباشرة</h3><p>كل تعديل يظهر فوراً في صفحة المعاينة دون خطوات إضافية.</p></article><article><span>⌑</span><h3>خصوصية بياناتك</h3><p>بياناتك تحفظ في متصفح جهازك ولا يتم إرسالها إلى خادم خارجي.</p></article><article><span>↧</span><h3>جاهزة للطباعة</h3><p>احفظ نسخة PDF من خلال نافذة الطباعة في المتصفح.</p></article></div></section>
+    <section class="plans-section" id="plans">
+      <div class="section-title centered"><span class="eyebrow">خطط سيرتي</span><h2>ابدأ مجاناً، وطوّر تجربتك وقتما تريد</h2><p>الاشتراكات معروضة للتجربة، وتفعيل الدفع الإلكتروني يتطلب ربط بوابة دفع معتمدة.</p></div>
+      <div class="plan-grid">
+        <article class="plan-card"><span class="plan-tag">للبداية</span><h3>مجاني</h3><div class="plan-price">0 <small>مجاناً</small></div><ul><li>إنشاء سيرة ذاتية</li><li>القوالب الأساسية</li><li>حفظ على الجهاز</li><li>تصدير PDF عبر الطباعة</li></ul><button class="btn btn-soft plan-button" data-plan="free">الخطة الحالية</button></article>
+        <article class="plan-card featured"><span class="plan-tag">الأكثر مرونة</span><h3>احترافي</h3><div class="plan-price">— <small>يحدد السعر لاحقاً</small></div><ul><li>قوالب احترافية إضافية</li><li>حفظ السير الذاتية سحابياً</li><li>إدارة عدة نسخ من سيرتك</li><li>مزايا إضافية حسب إعداد الإدارة</li></ul><button class="btn btn-primary plan-button" data-plan="pro">طلب الاشتراك</button></article>
+        <article class="plan-card"><span class="plan-tag">للفرق</span><h3>أعمال</h3><div class="plan-price">— <small>حسب الاتفاق</small></div><ul><li>إدارة ملفات متعددة</li><li>مزايا مخصصة</li><li>دعم وإعداد خاص</li><li>تفعيل بواسطة الإدارة</li></ul><button class="btn btn-dark plan-button" data-plan="business">طلب الاشتراك</button></article>
+      </div>
+    </section>
+    <section class="guide-section" id="guide"><div class="guide-inner"><div><span class="eyebrow">بكل بساطة</span><h2>ثلاث خطوات<br>وتكون جاهزاً.</h2><p>أنشئ ملفاً مهنياً مرتباً وابدأ التقديم بثقة.</p><a href="#builder" class="btn btn-primary">ابدأ الآن ←</a></div><div class="guide-steps"><div><b>01</b><section><h3>أدخل بياناتك</h3><p>معلوماتك وخبراتك ومهاراتك في مكان واحد.</p></section></div><div><b>02</b><section><h3>اختر التصميم</h3><p>شاهد المعاينة وبدّل القالب حتى تجد الأنسب.</p></section></div><div><b>03</b><section><h3>احفظ وشارك</h3><p>اطبع أو احفظ ملف PDF وقدّمه للوظائف.</p></section></div></div></div></section>
+  </main>
+  <footer class="footer"><a class="logo" href="#"><span class="logo-symbol">س</span><span>سيرتي<span class="logo-dot">.</span><small>مساحتك المهنية</small></span></a><p>خطوتك الأولى نحو فرصة تستحقها.</p><small>© 2026 سيرتي. صُنع بعناية.</small><div class="legal-links"><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">الشروط والأحكام</a></div></footer>
+  <section class="account-modal" id="accountModal" aria-hidden="true">
+    <div class="account-box">
+      <button class="modal-close" id="closeAccount" aria-label="إغلاق">×</button>
+      <div class="account-brand"><span class="logo-symbol">س</span><div><b>حساب سيرتي</b><small>احفظ سيرتك وارجع إليها من أي جهاز</small></div></div>
+      <div class="auth-tabs"><button class="auth-tab active" data-auth="login">تسجيل الدخول</button><button class="auth-tab" data-auth="signup">إنشاء حساب</button></div>
+      <form id="authForm">
+        <label class="field">البريد الإلكتروني<input id="authEmail" type="email" required placeholder="name@email.com"></label>
+        <label class="field">كلمة المرور<input id="authPassword" type="password" required minlength="6" placeholder="6 أحرف على الأقل"></label>
+        <button class="btn btn-primary auth-submit" type="submit" id="authSubmit">دخول</button><button type="button" class="forgot-link" id="forgotPassword">نسيت كلمة المرور؟</button>
+      </form>
+      <div class="account-status" id="accountStatus">يمكنك استخدام المنشئ دون حساب. الحساب مطلوب للحفظ السحابي.</div>
+      <div class="logged-in" id="loggedIn" hidden><p id="userEmail"></p><button class="btn btn-primary" id="cloudSave">حفظ السيرة في حسابي</button><button class="btn btn-soft" id="cloudLoad">استرجاع آخر سيرة محفوظة</button><a class="admin-link" id="adminLink" href="admin.html" hidden>فتح لوحة الإدارة ←</a><button class="logout-link" id="logoutBtn">تسجيل الخروج</button></div>
+    </div>
+  </section>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="firebase-app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
